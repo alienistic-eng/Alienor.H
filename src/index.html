@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dim">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cubing</title>
     <link href="./css/output.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">Hello World!</h1>
+    <!--npx @tailwindcss/cli -i ./src/css/inputdaisy.css -o ./src/css/output.css --watch -->
+    <h1 class="text-4xl font-bold text-center m-6">Le cubing</h1>
+    <p class="text-left m-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aspernatur enim
+        reiciendis sint nostrum officia a adipisci eum placeat recusandae dolor fugit voluptate asperiores repudiandae
+        consequuntur officiis nobis voluptatum cum illum, soluta ullam labore provident. Eius repellendus molestiae
+        ducimus unde voluptate culpa iure esse alias asperiores obcaecati sapiente vitae totam ab nesciunt vel assumenda
+        inventore, magni, quos eaque? Accusamus, tempora?
+    </p>
+    <div class="w-full flex items-center justify-center">
+        <img class="h-auto w-70" src="./assets/cube.svg" alt="default cube">
+    </div>
+    <hr class="m-6">
+    <h2 class="text-3xl font-bold text-left m-6">Calculatrice</h2>
+    <div id="print" class="p-2 border mx-6 rounded-md h-10"></div>
+    <div class="grid grid-cols-4 content-center gap-4 m-6">
+        <button id="7" onclick="save(7)" class="btn btn-soft btn-accent">7</button>
+        <button id="8" onclick="save(8)" class="btn btn-soft btn-accent">8</button>
+        <button id="9" onclick="save(9)" class="btn btn-soft btn-accent">9</button>
+        <button id="add" onclick="save('+')" class="btn btn-soft btn-success">+</button>
+        <button id="4" onclick="save(4)" class="btn btn-soft btn-accent">4</button>
+        <button id="5" onclick="save(5)" class="btn btn-soft btn-accent">5</button>
+        <button id="6" onclick="save(6)" class="btn btn-soft btn-accent">6</button>
+        <button id="sub" onclick="save('-')" class="btn btn-soft btn-success">-</button>
+        <button id="1" onclick="save(1)" class="btn btn-soft btn-accent">1</button>
+        <button id="2" onclick="save(2)" class="btn btn-soft btn-accent">2</button>
+        <button id="3" onclick="save(3)" class="btn btn-soft btn-accent">3</button>
+        <button id="sub" onclick="result()" class="btn btn-soft btn-success">=</button>
+        <div></div>
+        <button id="0" onclick="save(0)" class="btn btn-soft btn-accent">0</button>
+        <div></div>
+        <button id="canc" onclick="cancel()" class="btn btn-soft btn-error">C</button>
+    </div>
+    <hr class="m-6">
+    <h2 class="text-3xl font-bold text-left m-6">Me contacter</h2>
+    <p class="text-left m-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit eius
+        consectetur error quis quibusdam et! Totam voluptates doloribus ipsam dolorum sequi? Officia reiciendis
+        provident eaque atque labore assumenda, quae dolores possimus, mollitia delectus ducimus qui molestiae nam,
+        culpa pariatur!
+    </p>
+    <a href="quest.html" class="link m-6">Questionnaire</a>
+    <hr class="m-6">
+    <button class="btn btn-soft mx-6 mb-6">Brute force</button>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

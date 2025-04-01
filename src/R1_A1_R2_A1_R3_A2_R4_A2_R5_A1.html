@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="text-4xl font-bold text-center m-6">Contact</h1>
+
+    <div class="grid gap-6 m-6 md:grid-cols-2">
+        <div>
+            <label for="first_name">Prénom</label>
+            <input type="text" id="first_name" class="input input-accent w-full bg-gray-700">
+        </div>
+        <div>
+            <label for="family_name">Nom de famille</label>
+            <input type="text" id="family_name" class="input input-accent w-full bg-gray-700">
+        </div>
+    </div>
+    <div class="m-6">
+        <label for="email">Votre adresse mail</label>
+        <input type="email" id="email" class="input input-accent w-full bg-gray-700" />
+    </div>
+    <div class="m-6">
+        <label for="message">Message (ne pas utiliser de caracteres speciaux autre que `.` )</label>
+        <input type="text" id="message" class="input input-accent w-full bg-gray-700 h-50" />
+    </div>
+
+    <button class="btn btn-accent m-6">
+        <a id="bouttonEnv" href="">
+            Envoyer
+        </a>
+    </button>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
