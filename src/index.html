@@ -23,23 +23,25 @@
     <hr class="m-6">
     <h2 class="text-3xl font-bold text-left m-6">Calculatrice</h2>
     <div id="print" class="p-2 border mx-6 rounded-md h-10"></div>
-    <div class="grid grid-cols-4 content-center gap-4 m-6">
-        <button id="7" onclick="save(7)" class="btn btn-soft btn-accent">7</button>
-        <button id="8" onclick="save(8)" class="btn btn-soft btn-accent">8</button>
-        <button id="9" onclick="save(9)" class="btn btn-soft btn-accent">9</button>
-        <button id="add" onclick="save('+')" class="btn btn-soft btn-success">+</button>
-        <button id="4" onclick="save(4)" class="btn btn-soft btn-accent">4</button>
-        <button id="5" onclick="save(5)" class="btn btn-soft btn-accent">5</button>
-        <button id="6" onclick="save(6)" class="btn btn-soft btn-accent">6</button>
-        <button id="sub" onclick="save('-')" class="btn btn-soft btn-success">-</button>
-        <button id="1" onclick="save(1)" class="btn btn-soft btn-accent">1</button>
-        <button id="2" onclick="save(2)" class="btn btn-soft btn-accent">2</button>
-        <button id="3" onclick="save(3)" class="btn btn-soft btn-accent">3</button>
-        <button id="sub" onclick="result()" class="btn btn-soft btn-success">=</button>
-        <div></div>
-        <button id="0" onclick="save(0)" class="btn btn-soft btn-accent">0</button>
-        <div></div>
-        <button id="canc" onclick="cancel()" class="btn btn-soft btn-error">C</button>
+    <div class="flex justify-center">
+        <div class="grid grid-cols-4 gap-4 m-6">
+            <button onclick="save(7)" class="btn btn-soft btn-accent">7</button>
+            <button onclick="save(8)" class="btn btn-soft btn-accent">8</button>
+            <button onclick="save(9)" class="btn btn-soft btn-accent">9</button>
+            <button onclick="save('+')" class="btn btn-soft btn-success">+</button>
+            <button onclick="save(4)" class="btn btn-soft btn-accent">4</button>
+            <button onclick="save(5)" class="btn btn-soft btn-accent">5</button>
+            <button onclick="save(6)" class="btn btn-soft btn-accent">6</button>
+            <button onclick="save('-')" class="btn btn-soft btn-success">-</button>
+            <button onclick="save(1)" class="btn btn-soft btn-accent">1</button>
+            <button onclick="save(2)" class="btn btn-soft btn-accent">2</button>
+            <button onclick="save(3)" class="btn btn-soft btn-accent">3</button>
+            <button onclick="result()" class="btn btn-soft btn-success">=</button>
+            <div></div>
+            <button onclick="save(0)" class="btn btn-soft btn-accent">0</button>
+            <div></div>
+            <button onclick="cancel()" class="btn btn-soft btn-error">C</button>
+        </div>
     </div>
     <hr class="m-6">
     <h2 class="text-3xl font-bold text-left m-6">Me contacter</h2>
@@ -48,7 +50,7 @@
         provident eaque atque labore assumenda, quae dolores possimus, mollitia delectus ducimus qui molestiae nam,
         culpa pariatur!
     </p>
-    <a href="quest.html" class="link m-6">Questionnaire</a>
+    <a href="questionnaire.html" class="link m-6">Questionnaire</a>
     <hr class="m-6">
     <button class="btn btn-soft mx-6 mb-6">Brute force</button>
 

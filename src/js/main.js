@@ -33,3 +33,28 @@ function cancel() {
     calcul = ""
 }
 
+function bruteForce() {
+    let combinaisonsNum = [""];
+    for (let i = 0; i < 5; i++) {
+        let lst = [];
+        for (let elm of combinaisonsNum) {
+            lst.push(elm + 1, elm + 2);
+        }
+        combinaisonsNum = lst;
+    }
+    
+    let combinaisonsLien = []
+    for (let suite of combinaisonsNum) {
+        let newLien = ""
+        for (let i = 0; i < 5; i++) {
+            newLien += "R" + (i + 1) + "_A" + suite[i]
+            if (i < 4) {
+                newLien += "_"
+            }
+        }
+        combinaisonsLien.push(newLien + ".html")
+    }
+    console.log(combinaisonsLien)
+}
+
+// bruteForce()

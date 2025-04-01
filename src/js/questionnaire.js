@@ -70,13 +70,13 @@ function enregistrerReponse(reponse) {
         if (resultat != "R1_A1_R2_A1_R3_A2_R4_A2_R5_A1.html") {
             const messageErreur = document.createElement("div")
             messageErreur.innerText = "Suite à vos réponses, nous n'entrerons pas en contact"
-            messageErreur.setAttribute("class","text-2xl m-6")
+            messageErreur.setAttribute("class", "text-2xl m-6")
             document.body.appendChild(messageErreur)
         } else {
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
             lienContact.textContent = "Voici notre contact"
-            lienContact.setAttribute("class","link text-2xl m-6")
+            lienContact.setAttribute("class", "link text-2xl m-6")
             document.body.appendChild(lienContact)
         }
     }
