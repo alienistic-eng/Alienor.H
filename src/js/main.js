@@ -33,7 +33,7 @@ function cancel() {
     calcul = ""
 }
 
-function bruteForce() {
+async function bruteForce() {
     let combinaisonsNum = [""];
     for (let i = 0; i < 5; i++) {
         let lst = [];
@@ -42,7 +42,7 @@ function bruteForce() {
         }
         combinaisonsNum = lst;
     }
-    
+
     let combinaisonsLien = []
     for (let suite of combinaisonsNum) {
         let newLien = ""
@@ -54,7 +54,12 @@ function bruteForce() {
         }
         combinaisonsLien.push(newLien + ".html")
     }
-    console.log(combinaisonsLien)
-}
 
-// bruteForce()
+    for (let url of combinaisonsLien) {
+        const response = await fetch(url);
+        if (response.ok) {
+            window.open(url)
+            break
+        }
+    }
+}

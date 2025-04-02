@@ -56,7 +56,7 @@ actualise(current_question)
 
 let reponses = ""
 
-function enregistrerReponse(reponse) {
+async function enregistrerReponse(reponse) {
     reponses += "R" + (current_question + 1) + "_A" + reponse;
     current_question++;
     if (current_question < 5) {
@@ -67,17 +67,18 @@ function enregistrerReponse(reponse) {
         document.getElementById("rep1").style.display = "none";
         document.getElementById("rep2").style.display = "none";
         let resultat = reponses + ".html"
-        if (resultat != "R1_A1_R2_A1_R3_A2_R4_A2_R5_A1.html") {
-            const messageErreur = document.createElement("div")
-            messageErreur.innerText = "Suite à vos réponses, nous n'entrerons pas en contact"
-            messageErreur.setAttribute("class", "text-2xl m-6")
-            document.body.appendChild(messageErreur)
-        } else {
+        const response = await fetch(resultat);
+        if (response.ok) {
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
             lienContact.textContent = "Voici notre contact"
             lienContact.setAttribute("class", "link text-2xl m-6")
             document.body.appendChild(lienContact)
+        } else {
+            const messageErreur = document.createElement("div")
+            messageErreur.innerText = "Suite à vos réponses, nous n'entrerons pas en contact"
+            messageErreur.setAttribute("class", "text-2xl m-6")
+            document.body.appendChild(messageErreur)
         }
     }
 }
