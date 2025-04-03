@@ -4,58 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubing</title>
+    <title>Dino mood</title>
     <link href="./css/output.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--npx @tailwindcss/cli -i ./src/css/inputdaisy.css -o ./src/css/output.css --watch -->
-    <h1 class="text-4xl font-bold text-center m-6">Le cubing</h1>
-    <p class="text-left m-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aspernatur enim
-        reiciendis sint nostrum officia a adipisci eum placeat recusandae dolor fugit voluptate asperiores repudiandae
-        consequuntur officiis nobis voluptatum cum illum, soluta ullam labore provident. Eius repellendus molestiae
-        ducimus unde voluptate culpa iure esse alias asperiores obcaecati sapiente vitae totam ab nesciunt vel assumenda
-        inventore, magni, quos eaque? Accusamus, tempora?
-    </p>
-    <div class="w-full flex items-center justify-center">
-        <img class="h-auto w-70" src="./assets/cube.svg" alt="default cube">
-    </div>
-    <hr class="m-6">
-    <h2 class="text-3xl font-bold text-left m-6">Calculatrice</h2>
-    <div class="flex justify-center">
-        <div id="print" class="p-2 border mx-6 rounded-md h-10 w-55"></div>
-    </div>
-    <div class="flex justify-center">
-        <div class="grid grid-cols-4 gap-4 m-6">
-            <button onclick="save(7)" class="btn btn-soft btn-accent">7</button>
-            <button onclick="save(8)" class="btn btn-soft btn-accent">8</button>
-            <button onclick="save(9)" class="btn btn-soft btn-accent">9</button>
-            <button onclick="save('+')" class="btn btn-soft btn-success">+</button>
-            <button onclick="save(4)" class="btn btn-soft btn-accent">4</button>
-            <button onclick="save(5)" class="btn btn-soft btn-accent">5</button>
-            <button onclick="save(6)" class="btn btn-soft btn-accent">6</button>
-            <button onclick="save('-')" class="btn btn-soft btn-success">-</button>
-            <button onclick="save(1)" class="btn btn-soft btn-accent">1</button>
-            <button onclick="save(2)" class="btn btn-soft btn-accent">2</button>
-            <button onclick="save(3)" class="btn btn-soft btn-accent">3</button>
-            <button onclick="result()" class="btn btn-soft btn-success">=</button>
-            <div></div>
-            <button onclick="save(0)" class="btn btn-soft btn-accent">0</button>
-            <div></div>
-            <button onclick="cancel()" class="btn btn-soft btn-error">C</button>
+    <div class="w-1/20 h-full fixed bg-base-200 text-2xl"></div>
+
+    <div class="w-19/20 float-right">
+
+        <div class="top-0 sticky">
+            <div class="flex items-center justify-center bg-base-300 h-20">
+                <h1 class="text-4xl font-bold text-center">DINO MOOD</h1>
+            </div>
+        </div>
+
+        <div>
+            <p class="m-6 text-2xl">
+                <u><b>Vous vous sentez perplexe ? Vous craignez une petite dépression hebdomadaire ?</b></u> Soyez
+                rassuré, <b class="text-error">DINO MOOD</b> est là pour vous. Choisissez le mood du dino sur la charte
+                et laissez-vous charmer par ses couleurs. L'espace d'une minute, vous aurez oublié le mood crocodile
+                pour un mood dino qui déchire !
+            </p>
+            <div class="flex items-center columns-2 m-6 gap-5">
+                <div class="w-3/4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood lundi</p>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-success"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-success"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-success"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-success"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2"></div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood mardi</p>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-primary"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-primary"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-primary"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2"></div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood mercredi</p>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-warning"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-warning"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-warning"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-warning"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2"></div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood jeudi</p>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-error"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-error"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-error"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-error"></div>
+                        <div class="p-2 rounded-full h-1 w-full row-span-2 bg-error"></div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood vendredi</p>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-secondary"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-secondary"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-secondary"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-secondary"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2"></div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex items-center gap-1">
+                        <p class="w-350 text-right mx-1">Dino mood week-end</p>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-accent"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-info"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-accent"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-info"></div>
+                        <div class="p-2 > rounded-full h-1 w-full row-span-2 bg-accent"></div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <div class="flex items-center justify-center">
+                        <img class="w-70 h-auto" src="./assets/dino.png" alt="dino">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="m-6">
+
+            <h2 class="text-3xl font-bold text-left m-6">Calculatrice</h2>
+            <div class="flex justify-center">
+                <div id="print" class="p-2 border mx-6 rounded-md h-10 w-55"></div>
+            </div>
+            <div class="flex justify-center">
+                <div class="grid grid-cols-4 gap-4 m-6">
+                    <button onclick="save(7)" class="btn btn-soft btn-accent">7</button>
+                    <button onclick="save(8)" class="btn btn-soft btn-accent">8</button>
+                    <button onclick="save(9)" class="btn btn-soft btn-accent">9</button>
+                    <button onclick="save('+')" class="btn btn-soft btn-success">+</button>
+                    <button onclick="save(4)" class="btn btn-soft btn-accent">4</button>
+                    <button onclick="save(5)" class="btn btn-soft btn-accent">5</button>
+                    <button onclick="save(6)" class="btn btn-soft btn-accent">6</button>
+                    <button onclick="save('-')" class="btn btn-soft btn-success">-</button>
+                    <button onclick="save(1)" class="btn btn-soft btn-accent">1</button>
+                    <button onclick="save(2)" class="btn btn-soft btn-accent">2</button>
+                    <button onclick="save(3)" class="btn btn-soft btn-accent">3</button>
+                    <button onclick="result()" class="btn btn-soft btn-success">=</button>
+                    <div></div>
+                    <button onclick="save(0)" class="btn btn-soft btn-accent">0</button>
+                    <div></div>
+                    <button onclick="cancel()" class="btn btn-soft btn-error">C</button>
+                </div>
+            </div>
+
+            <hr class="m-6">
+
+            <h2 class="text-3xl font-bold text-left m-6">Me contacter</h2>
+            <p class="text-left m-6">Pour des raisons de confidentialité, vous devez répondre correctement à un court
+                questionnaire afin que nous rentrions en contact. Celui-ci porte sur des notions d'informatique telles
+                que l'algorithmie, l'électronique et d'autres. Avez-vous ignoré vos enseignants (pas celui de
+                web évidemment) en classe ? Nous le verrons...</p>
+            <a href="questionnaire.html" class="link m-6">Questionnaire</a>
+
+            <hr class="m-6">
+
+            <button onclick="bruteForce()" class="btn btn-soft mx-6 mb-6">À vos risques et périls</button>
+
         </div>
     </div>
-    <hr class="m-6">
-    <h2 class="text-3xl font-bold text-left m-6">Me contacter</h2>
-    <p class="text-left m-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit eius
-        consectetur error quis quibusdam et! Totam voluptates doloribus ipsam dolorum sequi? Officia reiciendis
-        provident eaque atque labore assumenda, quae dolores possimus, mollitia delectus ducimus qui molestiae nam,
-        culpa pariatur!
-    </p>
-    <a href="questionnaire.html" class="link m-6">Questionnaire</a>
-    <hr class="m-6">
-    <button onclick="bruteForce()" class="btn btn-soft mx-6 mb-6">À vos risques et périls</button>
-
     <script src="js/main.js"></script>
 </body>
 

@@ -69,10 +69,15 @@ async function enregistrerReponse(reponse) {
         let resultat = reponses + ".html"
         const response = await fetch(resultat);
         if (response.ok) {
+            const messageCorrect = document.createElement("div")
+            messageCorrect.innerHTML = "Vous avez correctement répondu"
+            messageCorrect.setAttribute("class", "text-2xl mx-6")
+            document.body.appendChild(messageCorrect)
+            
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
             lienContact.textContent = "Voici notre contact"
-            lienContact.setAttribute("class", "link text-2xl m-6")
+            lienContact.setAttribute("class", "link text-2xl m-6 mx-10")
             document.body.appendChild(lienContact)
         } else {
             const messageErreur = document.createElement("div")
