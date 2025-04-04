@@ -8749,6 +8749,11 @@
       display: flex;
     }
   }
+  .lg\:flex-col {
+    @media (width >= 64rem) {
+      flex-direction: column;
+    }
+  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
