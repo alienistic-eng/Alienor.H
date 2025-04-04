@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dim">
+<html lang="en" data-theme="dim" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dino mood</title>
     <link href="./css/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83bc941f6a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="w-1/20 h-full fixed bg-base-200 text-2xl flex justify-center items-center">
-        <div class="rotate-90 m-6 flex text-center">
-            <b class="text-warning">dino</b>
-        </div>
+    <div class="w-1/20 h-full fixed bg-base-200 flex flex-col justify-evenly">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-40">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-310">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-265">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-220">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-240">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-150">
+        <img src="assets/dino.png"
+            class="transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-60">
     </div>
 
     <div class="w-19/20 float-right" id="charte">
@@ -22,23 +34,24 @@
                 <h1 class="text-4xl font-bold text-center mx-6 text-success">DINO MOOD</h1>
                 <div class="flex items-center justify-center">
                     <a href="#charte">
-                        <img src="assets/charte.png" class="h-15 mx-6 brightness-500 rotate-90">
+                        <i class="fa-solid fa-chart-simple rotate-90 text-4xl m-6"></i>
                     </a>
                     <a href="#jour">
-                        <img src="assets/jour.png" class="h-10 mx-6 brightness-60">
+                        <i class="fa-solid fa-calendar-days text-4xl m-6"></i>
                     </a>
                     <a href="#calculatrice">
-                        <img src="assets/calculatrice.png" class="h-10 mx-6 brightness-60">
+                        <i class="fa-solid fa-calculator text-4xl m-6"></i>
                     </a>
                     <a href="#contact">
-                        <img src="assets/contact.png" class="h-10 mx-6 brightness-60">
+                        <i class="fa-solid fa-envelope text-4xl m-6"></i>
                     </a>
                 </div>
             </div>
         </div>
 
         <div>
-            <h2 class="text-2xl font-bold text-left m-6"><u>Charte DINO MOOD</u></h2>
+            <h2 class="text-3xl font-bold text-left m-6 flex items-center"><i
+                    class="fa-solid fa-chart-simple text-4xl mr-3"></i><u>Charte DINO MOOD</u></h2>
             <p class="m-6 text-2xl">
                 <b>Vous vous sentez perplexe ? Vous craignez une petite dépression journaliaire ?</b> Soyez
                 rassuré, <b class="text-primary">DINO MOOD</b> est là pour vous. Choisissez sur la charte
@@ -111,10 +124,11 @@
             </div>
 
             <hr class="m-6" id="jour">
-
-            <h2 class="text-3xl font-bold text-left m-6"><u>Dino du jour</u></h2>
+            <h2 class="text-3xl font-bold text-left m-6 flex items-center"><i
+                    class="fa-solid fa-calendar-days text-4xl mr-3"></i><u>Dino du jour</u></h2>
             <p class="m-6 text">
-                Découvrez le <b class="text-secondary">DINO DU JOUR</b>. Craquez quotidiennement pour un nouveau <b class="text-secondary">dino</b> et
+                Découvrez le <b class="text-secondary">DINO DU JOUR</b>. Craquez quotidiennement pour un nouveau <b
+                    class="text-secondary">dino</b> et
                 sa
                 douceur tout en couleur !
             </p>
@@ -153,9 +167,11 @@
 
             <hr class="m-6" id="calculatrice">
 
-            <h2 class="text-3xl font-bold text-left m-6"><u>Calculatrice</u></h2>
+            <h2 class="text-3xl font-bold text-left m-6 flex items-center"><i
+                    class="fa-solid fa-calculator text-4xl mr-3"></i><u>Calculatrice</u></h2>
             <p class="m-6 text">
-                Combien de <b class="text-accent">dinos</b> est trop de <b class="text-accent">dinos</b> ? Faîtes les comptes...mais non en fait.
+                Combien de <b class="text-accent">dinos</b> est trop de <b class="text-accent">dinos</b> ? Faîtes les
+                comptes...mais non en fait.
                 On n'a jamais assez de <b class="text-accent">dinos</b>
             </p>
             <div class="flex justify-center">
@@ -183,15 +199,18 @@
             </div>
 
             <hr class="m-6" id="contact">
-
-            <h2 class="text-3xl font-bold text-left m-6"><u>Me contacter</u></h2>
+            <h2 class="text-3xl font-bold text-left m-6 flex items-center"><i
+                    class="fa-solid fa-envelope text-4xl mr-3"></i><u>Me contacter</u></h2>
             <p class="text-left m-6">Pour des raisons de protection de la souveraineté des
                 <b class="text-error">dinos</b>, vous devez répondre correctement à un court questionnaire afin que
                 nous rentrions en contact. Celui-ci porte sur des notions d'informatique telles
                 que l'algorithmie, l'électronique et d'autres. Avez-vous ignoré vos enseignants (pas celui de
                 web évidemment) en classe ? Nous le verrons...
             </p>
-            <a href="questionnaire.html" class="link m-6">Questionnaire</a>
+            <button class="btn btn-error mx-6">
+                <a href="questionnaire.html">Questionnaire
+                </a>
+            </button>
 
             <hr class="m-6">
 

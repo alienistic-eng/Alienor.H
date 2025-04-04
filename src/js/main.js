@@ -25,7 +25,7 @@ function result() {
             result -= num;
         }
     }
-    document.getElementById("print").innerHTML = result
+    document.getElementById("print").innerHTML = result + " dinos "
 }
 
 function cancel() {
