@@ -6401,6 +6401,10 @@
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
+  .rounded-b-3xl {
+    border-bottom-right-radius: var(--radius-3xl);
+    border-bottom-left-radius: var(--radius-3xl);
+  }
   .rounded-b-box {
     border-bottom-left-radius: var(--radius-box);
     border-bottom-right-radius: var(--radius-box);
