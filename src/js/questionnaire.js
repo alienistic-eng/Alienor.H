@@ -70,13 +70,13 @@ async function enregistrerReponse(reponse) {
         const response = await fetch(resultat);
         if (response.ok) {
             const messageCorrect = document.createElement("div")
-            messageCorrect.innerHTML = "Vous avez correctement répondu"
+            messageCorrect.innerHTML = "Voici notre contact :"
             messageCorrect.setAttribute("class", "text-2xl mx-6")
             document.body.appendChild(messageCorrect)
             
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
-            lienContact.textContent = "Voici notre contact"
+            lienContact.textContent = "R1_A1_R2_A1_R3_A2_R4_A2_R5_A1.html"
             lienContact.setAttribute("class", "link text-2xl m-6 mx-10")
             document.body.appendChild(lienContact)
         } else {
