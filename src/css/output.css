@@ -5484,6 +5484,15 @@
   .w-screen {
     width: 100vw;
   }
+  .max-w-fit {
+    max-width: fit-content;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .max-w-max {
+    max-width: max-content;
+  }
   .max-w-none {
     max-width: none;
   }

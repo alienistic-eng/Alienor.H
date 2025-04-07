@@ -64,21 +64,22 @@ async function enregistrerReponse(reponse) {
         actualise(current_question);
     } else {
         document.getElementById("question").innerHTML = "Fin du questionnaire";
-        document.getElementById("rep1").style.display = "none";
-        document.getElementById("rep2").style.display = "none";
+        document.getElementById("question").setAttribute("class", "text-3xl font-bold text-left m-6")
+        document.getElementById("bouttonsRep").remove()
         let resultat = reponses + ".html"
         const response = await fetch(resultat);
         if (response.ok) {
-            const messageCorrect = document.createElement("div")
-            messageCorrect.innerHTML = "Voici notre contact :"
-            messageCorrect.setAttribute("class", "text-2xl mx-6")
-            document.body.appendChild(messageCorrect)
-            
+            const boiteLien = document.createElement("div")
+            boiteLien.setAttribute("class", "flex items-center")
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
-            lienContact.textContent = resultat
-            lienContact.setAttribute("class", "link text-2xl m-6 mx-10")
-            document.body.appendChild(lienContact)
+            lienContact.textContent = "Voici notre contact"
+            lienContact.setAttribute("class", "link text-2xl max-w-full")
+            const icone = document.createElement("i")
+            icone.setAttribute("class", "fa-solid fa-envelope text-3xl mx-6")
+            boiteLien.appendChild(icone)
+            boiteLien.appendChild(lienContact)
+            document.body.appendChild(boiteLien)
         } else {
             const messageErreur = document.createElement("div")
             messageErreur.innerText = "Suite à vos réponses, nous n'entrerons pas en contact"
