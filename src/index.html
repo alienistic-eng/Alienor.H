@@ -11,40 +11,23 @@
 
 <body class="flex h-fit">
 
-    <div class="w-auto top-0 sticky h-screen bg-base-200 hidden sm:flex flex-col justify-evenly p-3">
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-40" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-310" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-265" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-220" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-240" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-150" />
-        <img src="assets/dino.png"
-            class="h-1/7 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-60" />
-    </div>
-
     <div class="w-full" id="charte">
         <div class="top-0 sticky z-1">
-            <div class="flex items-center justify-between bg-base-300 h-20">
+            <div class="flex items-center justify-between bg-base-300 h-20 rounded-3xl">
                 <h1 class="text-2xl sm:text-3xl font-bold text-center mx-6 text-success">
                     DINO MOOD
                 </h1>
                 <div class="hidden sm:flex items-center justify-center">
-                    <a href="#charte">
+                    <a href="#charte" class="transition-all duration-400 cursor-pointer hover:text-primary">
                         <i class="fa-solid fa-chart-simple rotate-90 text-2xl mx-6"></i>
                     </a>
-                    <a href="#jour">
+                    <a href="#jour" class="transition-all duration-400 cursor-pointer hover:text-secondary">
                         <i class="fa-solid fa-calendar-days text-2xl mx-6"></i>
                     </a>
-                    <a href="#calculatrice">
+                    <a href="#calculatrice" class="transition-all duration-400 cursor-pointer hover:text-accent">
                         <i class="fa-solid fa-calculator text-2xl mx-6"></i>
                     </a>
-                    <a href="#contact">
+                    <a href="#contact" class="transition-all duration-400 cursor-pointer hover:text-error">
                         <i class="fa-solid fa-envelope text-2xl mx-6"></i>
                     </a>
                 </div>
@@ -52,9 +35,11 @@
             </div>
         </div>
 
-        <div>
+        <div class="lg:px-[20%]">
             <h2 class="text-2xl font-bold text-left m-6 flex items-center">
-                <i class="fa-solid fa-chart-simple text-3xl mr-3 rotate-90"></i><u>Charte DINO MOOD</u>
+                <i
+                    class="fa-solid fa-chart-simple text-3xl mr-3 rotate-90 transition-all duration-400 cursor-pointer hover:text-primary"></i><u>Charte
+                    DINO MOOD</u>
             </h2>
             <p class="m-6">
                 <b>Vous vous sentez perplexe ? Vous craignez une petite dépression
@@ -131,7 +116,7 @@
                     </div>
 
                     <hr class="my-4 border-dashed" />
-                    
+
                     <div class="flex">
                         <div class="w-1/6 gap-1 text-right mx-3">Dino mood week-end</div>
                         <div class="w-5/6 flex items-center gap-1">
@@ -153,7 +138,9 @@
 
             <hr class="m-6" id="jour" />
             <h2 class="text-2xl font-bold text-left m-6 flex items-center">
-                <i class="fa-solid fa-calendar-days text-3xl mr-3"></i><u>Dino du jour</u>
+                <i
+                    class="fa-solid fa-calendar-days text-3xl mr-3 transition-all duration-400 cursor-pointer hover:text-secondary"></i><u>Dino
+                    du jour</u>
             </h2>
             <p class="m-6 text">
                 Découvrez le <b class="text-secondary">DINO DU JOUR</b>. Craquez
@@ -210,7 +197,8 @@
             <hr class="m-6" id="calculatrice" />
 
             <h2 class="text-2xl font-bold text-left m-6 flex items-center">
-                <i class="fa-solid fa-calculator text-3xl mr-3"></i><u>Calculatrice</u>
+                <i
+                    class="fa-solid fa-calculator text-3xl mr-3 transition-all duration-400 cursor-pointer hover:text-accent"></i><u>Calculatrice</u>
             </h2>
             <p class="m-6 text">
                 Combien de <b class="text-accent">dinos</b> est trop de
@@ -243,7 +231,9 @@
 
             <hr class="m-6" id="contact" />
             <h2 class="text-2xl font-bold text-left m-6 flex items-center">
-                <i class="fa-solid fa-envelope text-3xl mr-3"></i><u>Me contacter</u>
+                <i
+                    class="fa-solid fa-envelope text-3xl mr-3 transition-all duration-400 cursor-pointer hover:text-error"></i><u>Me
+                    contacter</u>
             </h2>
             <p class="text-left m-6">
                 Pour des raisons de protection de la souveraineté des
@@ -259,9 +249,38 @@
 
             <hr class="m-6" />
 
-            <button onclick="bruteForce()" class="btn btn-soft mx-6 mb-6">
-                À vos risques et périls
-            </button>
+            <div class="flex items-center justify-center flex-wrap mx-6">
+                <button onclick="bruteForce()" class="btn btn-soft h-15 m-2">
+                    Boutton brute force <br> À vos risques et périls
+                </button>
+                <p class="m-2">
+                    <b class="text-accent">R</b>
+                    <b class="text-info">A</b>
+                    <b class="text-success">A</b>
+                    <b class="text-primary">A</b>
+                    <b class="text-warning">W</b>
+                    <b class="text-error">W</b>
+                    <b class="text-secondary">R</b>
+                </p>
+            </div>
+
+            <div class="flex flex-wrap sm:flex justify-evenly m-6">
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-40" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-310" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-265" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-220" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-240" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-150" />
+                <img src="assets/dino.png"
+                    class="h-20 mx-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform -scale-x-100 hue-rotate-60" />
+            </div>-
+
         </div>
     </div>
     <script src="js/main.js"></script>

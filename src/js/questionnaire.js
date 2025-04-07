@@ -76,7 +76,7 @@ async function enregistrerReponse(reponse) {
             
             const lienContact = document.createElement("a")
             lienContact.setAttribute("href", resultat)
-            lienContact.textContent = "R1_A1_R2_A1_R3_A2_R4_A2_R5_A1.html"
+            lienContact.textContent = resultat
             lienContact.setAttribute("class", "link text-2xl m-6 mx-10")
             document.body.appendChild(lienContact)
         } else {
