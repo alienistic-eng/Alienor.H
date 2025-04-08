@@ -11,7 +11,6 @@ const questionnaire = [
     },
     {
         question: "Quel est le pire cas de complexité de l'algorithme de tri par insertion ?",
-        idQuest: 2,
         reponses:
         {
             idRep1: "O(n²)",
@@ -20,7 +19,6 @@ const questionnaire = [
     },
     {
         question: "Quel protocole est utilisé pour sécuriser les communications sur Internet ?",
-        idQuest: 3,
         reponses:
         {
             idRep1: "FTP",
@@ -29,7 +27,6 @@ const questionnaire = [
     },
     {
         question: "Quelle est l'unité de mesure de la résistance électrique ?",
-        idQuest: 4,
         reponses:
         {
             idRep1: "Farad (F)",
@@ -38,7 +35,6 @@ const questionnaire = [
     },
     {
         question: "Quel algorithme est asymétrique ?",
-        idQuest: 5,
         reponses:
         {
             idRep1: "RSA",

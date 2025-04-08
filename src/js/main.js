@@ -64,6 +64,7 @@ async function bruteForce() {
     }
 }
 
+// comportement page pour interaction caroussel
 document.querySelectorAll('.btn[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
